@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Simulador de Clemas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="clemas.jpg" alt="Imagen de clemas eléctricas" class="cabecera" />
+    <h1>Simulador de Clemas</h1>
+  </header>
+
+  <main>
+    <div id="startup">
+      <label for="numClemas">Selecciona cuántas clemas quieres simular:</label>
+      <input type="number" id="numClemas" min="1" max="24" value="12" />
+      <button id="startBtn">Iniciar simulación</button>
+    </div>
+
+    <div id="workspace" style="display:none">
+      <canvas id="lienzo" width="900" height="380"></canvas>
+      <input type="color" id="colorPicker" />
+
+      <div class="controles">
+        <button id="exportarEstado">Exportar estado (JSON)</button>
+        <button id="descargarPNG">Descargar PNG</button>
+        <button id="descargarJPG">Descargar JPG</button>
+        <button id="deleteArc" disabled>Eliminar arco</button>
+        <button id="clearAll">Borrar todo</button>
+      </div>
+
+      <pre id="salida"></pre>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desarrollado por <strong>Ángel Millán</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
