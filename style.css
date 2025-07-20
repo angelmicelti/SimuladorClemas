@@ -1,0 +1,132 @@
+/* style.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(90deg, #0074D9, #005fa3);
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.cabecera {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.cabecera:hover {
+  transform: scale(1.03);
+}
+
+main {
+  padding: 20px;
+}
+
+#startup {
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+#startup label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#startup input {
+  font-size: 16px;
+  padding: 6px;
+  width: 80px;
+}
+
+#startup button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  background: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#startup button:hover {
+  background: #005fa3;
+  cursor: pointer;
+}
+
+#lienzo {
+  border: 1px solid #666;
+  touch-action: none;
+  margin: 20px 0;
+}
+
+.controles {
+  margin-top: 10px;
+}
+
+.controles button {
+  margin: 0 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+}
+
+.controles button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#clearAll {
+  background: #f44336;
+  color: #fff;
+}
+
+#clearAll:hover {
+  background: #d32f2f;
+}
+
+#colorPicker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+
+pre {
+  text-align: left;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+footer {
+  background: #0074D9;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+}
