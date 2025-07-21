@@ -17,13 +17,23 @@
   <main>
     <div id="startup">
       <label for="numClemas">Selecciona cuántas clemas quieres usar (entre 1 y 24)</label>
-	  <label for="numClemas">Luego, pulsa el botón "Iniciar simulación"</label>
+      <label for="numClemas">Luego, pulsa el botón "Iniciar simulación"</label>
       <input type="number" id="numClemas" min="1" max="24" value="12" />
       <button id="startBtn">Iniciar simulación</button>
     </div>
 
     <div id="workspace" style="display:none">
-      <canvas id="lienzo" width="900" height="380"></canvas>
+      <div style="position:relative">
+        <canvas id="lienzo" width="900" height="380" aria-label="Área de trabajo para conexiones eléctricas"></canvas>
+        
+        <!-- Controles de zoom -->
+        <div class="zoom-controls">
+          <div class="zoom-btn" id="zoomIn">+</div>
+          <div class="zoom-btn" id="zoomOut">-</div>
+          <div class="zoom-btn" id="resetZoom">↺</div>
+        </div>
+      </div>
+      
       <input type="color" id="colorPicker" />
 
       <div class="controles">
@@ -32,8 +42,11 @@
         <button id="descargarJPG">Descargar JPG</button>
         <button id="deleteArc" disabled>Eliminar arco</button>
         <button id="clearAll">Borrar todo</button>
+        <button id="cargarJSON">Cargar archivo</button>
       </div>
 
+      <input type="file" id="fileInput" accept=".json" style="display:none" />
+      
       <pre id="salida"></pre>
     </div>
   </main>
