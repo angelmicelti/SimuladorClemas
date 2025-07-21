@@ -1,5 +1,4 @@
 /* style.css */
-
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f8f9fa;
@@ -82,14 +81,18 @@ main {
 
 .controles {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .controles button {
-  margin: 0 5px;
   padding: 8px 14px;
   font-size: 14px;
   border-radius: 4px;
   border: none;
+  min-width: 120px;
 }
 
 .controles button:hover {
@@ -107,10 +110,11 @@ main {
 }
 
 #colorPicker {
-  position: absolute;
-  width: 30px;
+  position: relative;
+  width: 50px;
   height: 30px;
-  opacity: 0;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
 pre {
@@ -129,4 +133,25 @@ footer {
   color: white;
   padding: 12px;
   font-size: 14px;
+}
+
+/* Nuevos estilos para controles de zoom */
+.zoom-controls {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.zoom-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
