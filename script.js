@@ -1,4 +1,25 @@
 // script.js
+// Registrar Service Worker (agregar esto al inicio del archivo)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/SimuladorClemas/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registrado con éxito: ', registration.scope);
+      }, function(err) {
+        console.log('Error al registrar ServiceWorker: ', err);
+      });
+  });
+}
+
+// Detectar si se puede instalar la PWA
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('PWA se puede instalar');
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const startup     = document.getElementById('startup');
   const workspace   = document.getElementById('workspace');
